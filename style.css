@@ -1,0 +1,26 @@
+.btnedit{
+    color: green;
+    cursor: pointer;
+    }
+
+.btndelete{
+    color: red;
+    cursor: pointer;
+    }
+
+.d-flex input {
+    margin: .9em 0em;
+}
+
+.d-flex button{
+margin: 1.5em .6em;
+padding: 0.3em 2.4em;
+}
+
+.container table{
+    margin: 1em 10em;
+}
+
+.btn{
+margin-bottom: 100px;
+}
