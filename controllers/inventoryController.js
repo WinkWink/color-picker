@@ -75,10 +75,10 @@ function updateIntoMongoDB(req,res){
     function handleValidationError(err,body){
         for(field in err.errors){
             switch(err.errors[field].path){
-                case:'productName':
+                case 'productName':
                 body['productNameError'] = err.errors[field].message;
                 break;
-                default;
+                default:
                 break;
             }
         }

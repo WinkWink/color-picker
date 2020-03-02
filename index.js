@@ -15,16 +15,18 @@ app.use(bodyparser.urlencoded({
 
 // create a welcome message and direct them to the main page 
 app.get('/', (req,res) => {
-    res.send('
-    
-    <h2 style="font-family: Malgun Gothic; color: midnightblue"> Welcome to CMS</h2>
-    Click here to go to <b> <a href="/inventory"> Inventory Page</a> </b>');
-});
+    res.send(`
+ 
+    <h2 style="font-family: Malgun Gothic; color: midnightblue ">Welcome to Inventory CMS</h2>
+     
+     
+     Click Here to go to <b> <a href="/inventory">Inventory Page</a> </b>`);
+    });
 app.use(bodyparser.json());
 
 // configuring express  middleware for the handlers 
 app.set('views', path.join(__dirname, '/views/'));
-app.engine('hbs', exphb({extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + 'views/layouts/'}));
+app.engine('hbs', exphb({extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/'}));
 app.set('view engine', 'hbs');
 
 // establish a server connection 
