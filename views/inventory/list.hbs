@@ -1,0 +1,30 @@
+<div>
+    <a class="btn btn-secondary" href="/inventory"><i class="fa fa-plus"></i> Create New</a>
+    <h3>inventory CMS List</h3>
+</div>
+
+<table class="table table striped">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Color</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr align="center">
+            <td>{{this.productID}}</td>
+            <td>{{this.productName}}</td>
+            <td>{{this.productPrice}}</td>
+            <td>{{this.productColor}}</td>
+            <td>
+                <a href="/course/{{this._id}}"> Edit </a>
+                <a href="/course/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
