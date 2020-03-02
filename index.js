@@ -10,7 +10,7 @@ const bodyparser = require('body-parser');
 const inventoryController = require('./controllers/inventoryController');
 
 app.use(bodyparser.urlencoded({
-    extended:true;
+    extended:true
 }));
 
 // create a welcome message and direct them to the main page 
