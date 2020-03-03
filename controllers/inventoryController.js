@@ -26,7 +26,7 @@ router.post('/', (req,res)=>{
 // creating function to insert data into mongoDB
 function insertIntoMongoDB(req,res){
     var inventory = new Inventory();
-    inventory.productId = req.body.productId;
+    inventory.productID = req.body.productID;
     inventory.productName = req.body.productName;
     inventory.productPrice = req.body.productPrice;
     inventory.productColor = req.body.productColor;
