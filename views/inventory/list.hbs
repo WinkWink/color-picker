@@ -15,14 +15,14 @@
     </thead>
     <tbody>
         {{#each list}}
-        <tr align="center">
+        <tr align="center" style="color: black;">
             <td>{{this.productID}}</td>
             <td>{{this.productName}}</td>
             <td>{{this.productPrice}}</td>
             <td>{{this.productColor}}</td>
             <td>
-                <a href="/course/{{this._id}}"> Edit </a>
-                <a href="/course/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+                <a href="/inventory/{{this._id}}"> Edit </a>
+                <a href="/inventory/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
             </td>
         </tr>
         {{/each}}
