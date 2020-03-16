@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // creating a router 
 var router = express.Router();
-
+// 
 // link
 const Inventory = mongoose.model('Inventory');
 
