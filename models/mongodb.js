@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-var connectionString= 'mongodb+srv://amanda:<Lollollol12>@cluster0-wcbhc.mongodb.net/test?retryWrites=true&w=majority';
+var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-wcbhc.mongodb.net/test?retryWrites=true&w=majority';
 
-var db = mongoose.connect(connectionString).catch((error) => { console.log(error); });
+mongoose.connect(connectionString).catch((error) => { console.log(error); });
 
 
 // mongoose.connect('mongodb://localhost:27017/ColorPicker',{useNewUrlParser: true}, (err)=>{
