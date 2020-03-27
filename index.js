@@ -1,5 +1,5 @@
 require('./models/mongodb');
-
+app.use(cors())
 // import packages that were downloaded 
 const express = require('express');
 var app = express();
