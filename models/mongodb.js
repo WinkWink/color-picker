@@ -23,5 +23,6 @@ module.exports = {mongoose}
 require('./inventory.model');
 
 const port = process.env.PORT || 3000;
-var app = require('http');
-app.createServer().listen(port);
+app.listen(port);
+
+module.exports = app;
