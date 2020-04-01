@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(connectionString,{ useUnifiedTopology: true,
@@ -18,5 +18,7 @@ mongoose.connect(connectionString,{ useUnifiedTopology: true,
 //         console.log('Failed to establish connetion with mongoDB with Error: ' + err);
 //     }
 // });
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 require('./inventory.model');
