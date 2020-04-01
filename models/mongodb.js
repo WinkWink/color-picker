@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority';
+var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-wcbhc.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(connectionString,{ useUnifiedTopology: true,
     useNewUrlParser: true }).catch((error) => { console.log(error); });
