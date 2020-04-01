@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority';
+// var connectionString= 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(connectionString,{ useUnifiedTopology: true,
-    useNewUrlParser: true }).catch((error) => { console.log(error); });
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority'
-// , { useNewUrlParser: true })
-//         .then(connect => console.log('connected to mongodb..'))
-//         .catch(e => console.log('could not connect to mongodb', e))
+// mongoose.connect(connectionString,{ useUnifiedTopology: true,
+//     useNewUrlParser: true }).catch((error) => { console.log(error); });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority'
+, { useNewUrlParser: true })
+        .then(connect => console.log('connected to mongodb..'))
+        .catch(e => console.log('could not connect to mongodb', e))
 
-// module.exports = {mongoose}
+module.exports = {mongoose}
 
 // mongoose.connect('mongodb://localhost:27017/ColorPicker',{useNewUrlParser: true}, (err)=>{
 //     if(!err){
@@ -23,4 +23,5 @@ mongoose.connect(connectionString,{ useUnifiedTopology: true,
 require('./inventory.model');
 
 const port = process.env.PORT || 3000;
-app.listen(port);
+var app = require('http');
+app.createServer().listen(port);
