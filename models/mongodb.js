@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // mongoose.connect(connectionString,{ useUnifiedTopology: true,
 //     useNewUrlParser: true }).catch((error) => { console.log(error); });
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority'
+mongoose.connect(process.env.MONGODB_URI || mongodb+srv://amanda:Lollollol12@cluster0-v11he.mongodb.net/test?retryWrites=true&w=majority
 , { useNewUrlParser: true })
         .then(connect => console.log('connected to mongodb..'))
         .catch(e => console.log('could not connect to mongodb', e))
